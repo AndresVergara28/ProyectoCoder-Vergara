@@ -7,7 +7,6 @@ function App() {
     <div style={{ width: '100vw', height: '100vh' }}>
       <NavBarComponent/>
       <ItemListContainer greeting='Bienvenido a mi tienda'/>
-   
     </div>
   )
 }

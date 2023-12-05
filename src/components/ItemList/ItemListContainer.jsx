@@ -1,9 +1,19 @@
+/* eslint-disable react/prop-types */
 
 
-const ItemListContainer = ({greeting}) => {
+const ItemListContainer = (props) => {
   return (
-    <div>
-      {greeting}
+    <div style={
+      {fontWeight:'bold',
+      fontSize:'2rem',
+      width:'100vw',
+      height:'50vh',
+      textAlign:'center'
+
+      
+    }
+    }>
+      {props.greeting}
     </div>
   )
 }
