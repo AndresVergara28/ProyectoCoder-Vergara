@@ -1,36 +1,32 @@
-import ItemListContainer from './components/ItemList/ItemListContainer';
-import CarouselComponent from './components/Carousel/CarouselComponent';
-import NavBarComponent from './components/NavBar/NavBarComponent';
-import { useEffect, useState } from 'react';
-import { getProducts } from './services';
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
+import NavBarComponent from "./components/NavBarComponent/NavBarComponent";
+import CounterComponent from "./components/CounterComponent/CounterComponent";
+import { useEffect, useState } from "react";
+import { getProducts } from "./services";
 
-import 'bootstrap/dist/css/bootstrap.min.css';
-
-
-
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const App = () => {
-
-  const [productsData,setProductsData] = useState([]);
-
-
+  const [productsData, setProductsData] = useState([]);
   useEffect(() => {
     getProducts()
-      .then(response => {
+      .then((response) => {
         setProductsData(response.data.products);
       })
-      .catch(error => {
+      .catch((error) => {
         console.log(error);
       });
-
   }, []);
   return (
-    <div style={{ width: '100vw', height: '100vh' }}>
+    <div style={{ width: "100vw", height: "100vh" }}>
       <NavBarComponent />
-      <ItemListContainer greeting='Bienvenido a mi tienda' productsData={productsData}/>
-      <CarouselComponent />
+      <ItemListContainer
+        greeting="Bienvenido a mi tienda"
+        productsData={productsData}
+      />
+      <CounterComponent  counterDefault= {1} stockData ={20} />
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;

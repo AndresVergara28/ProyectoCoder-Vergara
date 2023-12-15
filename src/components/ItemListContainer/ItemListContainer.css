@@ -1,0 +1,18 @@
+.items-list-container{
+    background-color: #212529;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.items-list-container .cart-container {
+    width: 200px;
+    height: auto;
+    background-color: #212529;
+    border-color: white;
+    color: white;
+}
+
+.items-list-container .cart-container .cart-image {
+    width: 10rem;
+}

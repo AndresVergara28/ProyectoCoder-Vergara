@@ -3,12 +3,12 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import CartWidget from '../CartWidget/CartWidget.jsx';
-import mainLogo from './mainLogo.png'
+import mainLogo from './TheWhiskeyHOuseLogo-WhiteLetter-NoBck.png'
+import './NavBarComponent.css'
 
 function BasicExample() {
   return (
-    <Navbar expand="lg" className="bg-body-secondary" data-bs-theme="dark"
-    style={{height:'20vh'}}>
+    <Navbar expand="lg" className="navbar-container">
       <Container>
        
         <Navbar.Brand href="#home"> <img src={mainLogo} alt="" style={{
@@ -17,9 +17,9 @@ function BasicExample() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#link">Contact</Nav.Link>
-            <NavDropdown title="Productos" id="basic-nav-dropdown">
+            <Nav.Link href="#home" style={{color:"white"}}>Home</Nav.Link>
+            <Nav.Link href="#link" style={{color:"white"}}>Contact</Nav.Link>
+            <NavDropdown title="Productos" id="basic-nav-dropdown" style={{color:"white"}}>
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
                 Another action

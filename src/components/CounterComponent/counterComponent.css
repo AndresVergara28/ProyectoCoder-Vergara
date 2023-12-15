@@ -1,0 +1,29 @@
+/* <div className="counterWidget">
+<p className="resButton">-</p>
+<p className="quantityValue">1</p>
+<p className="addButton">+</p>
+</div>
+ */
+
+.counterWidget {
+  background-color: blue;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.counterWidget p{
+    font-size: 24px;
+    font-weight: bolder;
+
+}
+.counterWidget .resButton, .counterWidget .addButton {
+    background-color: red;
+    text-align: center;
+    width: 50px;
+    cursor: pointer;
+}
