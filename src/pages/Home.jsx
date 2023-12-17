@@ -1,9 +1,16 @@
+import React from 'react'
 
 const Home = () => {
- 
   return (
-    <h1 style={{textAlign:'center', color:'gray'}}>CAROUSEL GRANDE DE MARKETING</h1>
-  );
-};
+    <div>
+      <h1 style={{
+        textAlign:'center',
+        color:'gray',
+        textShadow:'2px 2px 2px white',
+        fontSize:'10rem'
+      }}>HOME </h1>
+    </div>
+  )
+}
 
-export default Home;
+export default Home
