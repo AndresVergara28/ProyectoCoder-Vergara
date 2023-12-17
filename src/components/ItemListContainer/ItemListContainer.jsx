@@ -10,7 +10,7 @@ const ItemListContainer = ({ productsData }) => {
       {productsData.map((products) => {
         return (
           <Card key={products.id} className="cart-container">
-            <Link to={`/products/${products.id}`}>
+            <Link to={`/item/${products.id}`}>
               <Card.Img
                 variant="top"
                 src={products.thumbnail}

@@ -11,7 +11,7 @@ import {
  * @returns {Array}
  */
 
-export const useGetProducts = (limit = 50) => {
+export const useGetProducts = (limit = 100) => {
   const [productsData, setProductsData] = useState([]);
   useEffect(() => {
     getProducts(limit)
@@ -60,13 +60,12 @@ export const useGetProductsCategories = () => {
 };
 
 
-export const useGetProductsByCategory = (category) => {
-  const [productsByCategory, setProductsByCategory] = useState([]);
+export const useGetProductsByCategory = (category='smartphones') => {
+  const [productsData, setProductsByCategory] = useState([]);
 
   useEffect(()=>{
     getProductsByCategory(category)
     .then((response)=>{
-      console.log(response.data.products);
       setProductsByCategory(response.data.products)
     })
     .catch((error)=>{
@@ -74,6 +73,6 @@ export const useGetProductsByCategory = (category) => {
     });
   },[category]);
 
-  return { productsByCategory }
+  return { productsData }
 
 }

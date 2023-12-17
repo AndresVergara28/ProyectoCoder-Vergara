@@ -35,7 +35,7 @@ function BasicExample() {
               {categories.map((category, index) => {
                 return (
                   <NavDropdown.Item key={index}>
-                    <Link to={`./products/category/${category}`}>
+                    <Link to={`./category/${category}`}>
                       {category}
                     </Link>
                   </NavDropdown.Item>
