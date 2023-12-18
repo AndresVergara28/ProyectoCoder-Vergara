@@ -1,0 +1,10 @@
+.navbar-container {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  min-height: 15vh;
+  width: 100%;
+  border-bottom: 1px solid var(--clr-gris-secundario);
+
+  
+}

@@ -3,16 +3,16 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import CartWidget from "../CartWidget/CartWidget.jsx";
-import mainLogo from "./TheWhiskeyHOuseLogo-WhiteLetter-NoBck.png";
+import mainLogo from "./logoReact.png";
 import { useGetProductsCategories } from "../../hooks/useProducts.jsx";
-import "./NavBarComponent.css";
+import "./NavBarComponent.scss";
 import { Link } from "react-router-dom";
 
 function BasicExample() {
   const { categories } = useGetProductsCategories();
 
   return (
-    <Navbar expand="lg" className="navbar-container">
+    <Navbar className="navbar-container">
       <Container>
         <Navbar.Brand>
           <Link to={"/"}>
@@ -20,7 +20,7 @@ function BasicExample() {
               src={mainLogo}
               alt="mainLogo"
               style={{
-                width: "8rem",
+                width: "5rem",
               }}
             />
           </Link>
@@ -28,16 +28,23 @@ function BasicExample() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link style={{ color: "white" }}>
+            <Nav.Link
+              style={{ color: "white", fontSize: "var(--font-parrafo)" }}
+            >
               <Link to={"./products"}>Products</Link>
             </Nav.Link>
-            <NavDropdown title="Categories" id="basic-nav-dropdown">
+            <NavDropdown
+              title="Categories"
+              id="basic-nav-dropdown"
+              style={{ fontSize: "var(--font-parrafo)" }}
+            >
               {categories.map((category, index) => {
                 return (
-                  <NavDropdown.Item key={index}>
-                    <Link to={`./category/${category}`}>
-                      {category}
-                    </Link>
+                  <NavDropdown.Item
+                    key={index}
+                    style={{ fontSize: "var(--font-parrafo)" }}
+                  >
+                    <Link to={`./category/${category}`}>{category}</Link>
                   </NavDropdown.Item>
                 );
               })}

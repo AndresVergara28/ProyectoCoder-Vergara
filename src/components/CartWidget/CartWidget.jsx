@@ -1,17 +1,19 @@
-import './CartWidget.css'
-import cartIcon from './carrito.png'
+import './CartWidget.scss'
+import cartIcon from './CartWidget.png'
 
 
 
 
 const CartWidget = () => {
   return (
-    <div className='cartLogo-container'>
-      <img src={cartIcon} alt="" className="cartlogo"/>
-      <span style={{
+    <div className='cart-icon-container'>
+      <img src={cartIcon} alt="" className="cart-logo"/>
+      <p 
+      className='quantity-container'
+      style={{
         fontWeight:'bolder',
         color:'white'
-      }}>2</span>
+      }}>2</p>
     </div>
   )
 }

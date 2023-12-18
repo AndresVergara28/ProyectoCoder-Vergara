@@ -1,12 +1,12 @@
 /* eslint-disable react/prop-types */
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-import "./ItemListContainer.css";
+import "./ItemListContainer.scss";
 import { Link } from "react-router-dom";
 
 const ItemListContainer = ({ productsData }) => {
   return (
-    <div className="items-list-container">
+    <div className="items-list-container container">
       {productsData.map((products) => {
         return (
           <Card key={products.id} className="cart-container">
@@ -17,11 +17,11 @@ const ItemListContainer = ({ productsData }) => {
                 className="cart-image"
               />
             </Link>
-            <Card.Body>
-              <Card.Title>{products.title}</Card.Title>
-              <Card.Text>{products.description}</Card.Text>
+            <Card.Body className="cart-body">
+              <Card.Title className="cart-body-title">{products.title}</Card.Title>
+              <Card.Text className="cart-body-description">{products.description}</Card.Text>
               <div>{products.price}</div>
-              <Button variant="primary">Go somewhere</Button>
+              <Button className="cart-body-button">AÑADIR A CARRITO</Button>
             </Card.Body>
           </Card>
         );
